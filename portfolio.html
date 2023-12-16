@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+
+        <title>Mon portfolio</title>
+    </head>
+    <body>
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Shayma</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="file:///C:/Users/zayneb/Desktop/projet_web/acceuil.html" class="nav__link active">Home</a></li>
+                        
+                        <li class="nav__item"><a href="file:///C:/Users/zayneb/Desktop/projet_web/about_me.html" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="file:///C:/Users/zayneb/Desktop/projet_web/portfolio.html#work" class="nav__link">portfolio</a></li>
+                        
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+        <section class="about section " id="about">
+            <h2 class="section-title">Projects:</h2>
+        <section >
+            <h2>Project1:</h2>
+            <article>
+                <p><b>Gestion des Établissements de Transfusion Sanguine: </b>
+                    Ce projet consiste a réaliser une application qui permet d'administrer les établissements de transfusion sanguine afin de gérer les opérations de transfert de sang et centraliser les informations de dons et de donneurs.</p>
+                    
+                    <img src="c:\Users\zayneb\Desktop\3B8\tw\portfolio\Capture d'écran 2023-11-15 031332.png" alt="mon image" style="width: 25%;" onclick="openModal('path/to/image1.jpg')">
+                    <img src="c:\Users\zayneb\Desktop\3B8\tw\portfolio\Capture d'écran 2023-11-15 031411.png" alt="mon image" style="width: 25%;" onclick="openModal('path/to/image1.jpg')">
+                    <img src="c:\Users\zayneb\Desktop\3B8\tw\portfolio\Capture d'écran 2023-11-15 031459.png" alt="mon image" style="width: 25%;" onclick="openModal('path/to/image1.jpg')">
+            </article>
+            <h2>Project2:</h2>
+            <article>
+            <p><b> XO Challenge : </b>
+               Ce projet améliore le jeu classique Tic-Tac-Toe. Il met en valeur mes compétences en programmation, en résolution de problèmes et en conception centrée sur l'utilisateur. Il promet des heures de divertissement, de réflexion stratégique et de compétition amicale.</p>
+            <img src="c:/Users/zayneb/Desktop/3B8/tw/portfolio/jeu_xo/jeu1.png" alt="mon image" style="width: 50%;" onclick="openModal('path/to/image1.jpg')">
+            <img src="c:/Users/zayneb/Desktop/3B8/tw/portfolio/jeu_xo/jeu2.png" alt="mon image" style="width: 10%;" onclick="openModal('path/to/image1.jpg')">
+            <img src="c:/Users/zayneb/Desktop/3B8/tw/portfolio/jeu_xo/xogame1.png" alt="mon image" style="width: 25%;" onclick="openModal('path/to/image1.jpg')">
+        </article>
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+        
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+             document.getElementById('nav-toggle').addEventListener('click', function () {
+             document.getElementById('nav-menu').classList.toggle('show');
+            });
+            function openModal(imgSrc) {
+               var modal = document.getElementById('imageModal');
+               var modalImg = document.getElementById('modalImage');
+                modal.style.display = 'block';
+                modalImg.src = imgSrc;
+             }
+
+             function closeModal() {
+                 var modal = document.getElementById('imageModal');
+                 modal.style.display = 'none';
+             }
+
+
+        </script>
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <img id="modalImage" class="modal-content" alt="modal-image">
+        </div>
+    </body>
+    
+    </html>
+    
